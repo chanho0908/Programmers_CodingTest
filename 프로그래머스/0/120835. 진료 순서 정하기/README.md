@@ -1,10 +1,10 @@
 # [level 0] 진료 순서 정하기 - 120835 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120835) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120835?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 77.4 MB, 시간: 2.18 ms
+메모리: 63.2 MB, 시간: 19.24 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 4일 10:12:40
+2024년 2월 4일 18:39:35
 
 ### 문제 설명
 

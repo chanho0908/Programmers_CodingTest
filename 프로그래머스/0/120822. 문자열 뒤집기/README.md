@@ -1,10 +1,10 @@
 # [level 0] 문자열 뒤집기 - 120822 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120822) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/120822?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 86.7 MB, 시간: 0.04 ms
+메모리: 62.2 MB, 시간: 7.16 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 2월 3일 14:4:35
+2024년 03월 25일 00:54:45
 
 ### 문제 설명
 

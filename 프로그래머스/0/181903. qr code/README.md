@@ -1,10 +1,10 @@
 # [level 0] qr code - 181903 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181903) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181903?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 78 MB, 시간: 11.57 ms
+메모리: 58.9 MB, 시간: 0.14 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 4일 10:13:16
+2024년 05월 01일 22:38:54
 
 ### 문제 설명
 

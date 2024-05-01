@@ -1,10 +1,10 @@
 # [level 0] 0 떼기 - 181847 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181847) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181847?language=kotlin) 
 
 ### 성능 요약
 
-메모리: 67.7 MB, 시간: 0.04 ms
+메모리: 62 MB, 시간: 0.02 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 1월 5일 9:48:14
+2024년 05월 01일 23:20:44
 
 ### 문제 설명
 

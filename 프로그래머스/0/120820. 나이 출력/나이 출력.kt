@@ -1,5 +1,3 @@
 class Solution {
-    fun solution(age: Int): Int {
-        return 2022 - age + 1
-    }
+    fun solution(age: Int): Int = 2023 - age
 }

@@ -1,5 +1,4 @@
 class Solution {
-    fun solution(num_list: IntArray): IntArray {
-        return num_list.reversedArray()
-    }
+    fun solution(num_list: IntArray): IntArray = num_list.reversed().toIntArray()
+    
 }

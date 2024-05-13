@@ -1,7 +1,3 @@
 class Solution {
-    fun solution(n: Int, k: Int): Int {
-        return (12000*n) + (2000 * (k - n/10))     
-        
-        
-    }
+    fun solution(n: Int, k: Int): Int = (12000 * n) + ((k - (n/10)) * 2000 )
 }

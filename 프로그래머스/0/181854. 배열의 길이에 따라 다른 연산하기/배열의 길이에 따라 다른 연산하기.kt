@@ -1,21 +1,19 @@
 class Solution {
-    fun solution(arr: IntArray, n: Int): IntArray {
-        val answer = arr
-
-        when(arr.size % 2){
-            0 -> {
-                for(x in 1 until arr.size step 2){
-                    answer[x] += n
-                }
-
+    fun solution(arr: IntArray, n: Int): IntArray = if(arr.size % 2 == 0){
+        arr.mapIndexed{ i, v ->
+            if(i % 2 != 0){
+                v + n
+            }else{
+                v
             }
-            else ->{
-                for(x in arr.indices step 2){
-                    answer[x] += n
-                }
+        }.toIntArray()
+    }else{
+        arr.mapIndexed{ i, v ->
+            if(i % 2 == 0){
+                v + n
+            }else{
+                v
             }
-        }
-
-        return answer
+        }.toIntArray()
     }
 }

@@ -1,10 +1,10 @@
 # [level 0] 두 수의 합 - 181846 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181846?language=kotlin) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/181846) 
 
 ### 성능 요약
 
-메모리: 79.7 MB, 시간: 217.63 ms
+메모리: 79.9 MB, 시간: 236.21 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 03월 24일 22:45:30
+2024년 05월 22일 22:16:04
 
 ### 문제 설명
 

@@ -1,5 +1,4 @@
 class Solution {
-    fun solution(a: String, b: String): String {
-        return (a.toBigInteger().plus(b.toBigInteger())).toString()
-    }
+            fun solution(a: String, b: String): String = (a.toBigInteger() + b.toBigInteger()).toString()
+
 }

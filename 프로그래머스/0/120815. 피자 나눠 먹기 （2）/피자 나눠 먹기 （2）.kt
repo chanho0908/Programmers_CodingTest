@@ -1,16 +1,10 @@
-import kotlin.math.*;
-
 class Solution {
-    
-    fun GCD(a: Int, b: Int): Int{
-        if(b == 0 ) return a
-        return GCD(b, (a % b))
+    fun pizza(n: Int, cnt: Int): Int{
+        if(n.times(cnt).rem(6) == 0) return cnt
+        return pizza(n, cnt+1)
     }
     
-    fun LCM(a: Int, b: Int) = (a*b) / GCD(a, b)
-    
     fun solution(n: Int): Int {
-        
-        return LCM(max(n, 6), min(n, 6)) / 6
+        return n.times(pizza(n, 1)).div(6)
     }
 }

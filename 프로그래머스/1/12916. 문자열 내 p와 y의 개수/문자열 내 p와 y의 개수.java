@@ -1,18 +1,10 @@
 class Solution {
     boolean solution(String s) {
         boolean answer = true;
-        String str = s.toLowerCase();
-        int x = 0;
 
-        for(char c : str.toCharArray()){
-            if(c == 'p') x++;
-            else if(c == 'y') x--;
-        }
-            System.out.println(x);
+        // [실행] 버튼을 누르면 출력 값을 볼 수 있습니다.
+        System.out.println("Hello Java");
 
-        if(x == 0) answer = true;
-        else if(!str.contains("p") && !str.contains("y")) answer = true;
-        else answer = false;
         return answer;
     }
 }

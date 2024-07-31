@@ -1,7 +1,7 @@
 import java.util.*
 
-class Solution {fun solution(operations: Array<String>): IntArray {
-        val answer = IntArray(2) { 0 }
+class Solution {
+    fun solution(operations: Array<String>): IntArray {
         val minQ = PriorityQueue<Int>()
         val maxQ = PriorityQueue<Int>(Collections.reverseOrder())
 
@@ -15,23 +15,20 @@ class Solution {fun solution(operations: Array<String>): IntArray {
                 }
                 "D" -> {
                     when (op[1]) {
-                        "-1" -> {
-                            if (maxQ.isNotEmpty()) {
-                                maxQ.remove(minQ.poll())
-                            }
+                        "1" -> {
+                            if (minQ.isNotEmpty()) minQ.remove(maxQ.poll())
                         }
-                        else -> {
-                            if (minQ.isNotEmpty()) {
-                                minQ.remove(maxQ.poll())
-                            }
+                        "-1" -> {
+                            if (maxQ.isNotEmpty()) maxQ.remove(minQ.poll())
                         }
                     }
                 }
             }
         }
-
-        if (maxQ.isNotEmpty()) answer[0] = maxQ.peek() // 최댓값
-        if (minQ.isNotEmpty()) answer[0] = minQ.peek() // 최댓값
-        return answer
+        return if (minQ.isEmpty() and maxQ.isEmpty()){
+            intArrayOf(0, 0)
+        }else{
+            intArrayOf(maxQ.poll(), minQ.poll())
+        }
     }
 }

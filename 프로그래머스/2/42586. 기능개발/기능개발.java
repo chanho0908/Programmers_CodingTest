@@ -1,33 +1,27 @@
 import java.util.*;
 
 class Solution {
-    public List<Integer> solution(int[] progresses, int[] speeds) {
-        List<Integer> answer = new ArrayList<>();
-        List<Integer> workDays = new ArrayList<>();
+    public int[] solution(int[] progresses, int[] speeds) {
+        ArrayList<Integer> answer = new ArrayList<>();
 
-        for (int i = 0; i < progresses.length; i++) {
+        int i = 0;  // 작업 인덱스
+        while (i < progresses.length) {
+            // 매일 작업의 진행도를 업데이트
+            for (int j = 0; j < progresses.length; j++) {
+                progresses[j] += speeds[j];  // 각 작업의 진행도 업데이트
+            }
+
+            // 배포할 수 있는 작업이 있는지 확인
             int cnt = 0;
-            while (progresses[i] < 100) {
-                progresses[i] += speeds[i];
+            while (i < progresses.length && progresses[i] >= 100) {
                 cnt++;
+                i++;
             }
-            workDays.add(cnt);
-        }
 
-        int lt = 0;
-        int rt = 0;
-        int works = 1;
-        while (lt != workDays.size() - 1) {
-            if (workDays.get(rt) >= workDays.get(lt + 1)) {
-                works++;
-            } else {
-                answer.add(works);
-                rt = lt + 1;
-                works = 1;
+            if (cnt > 0) {
+                answer.add(cnt);  // 한번에 배포된 작업 수 추가
             }
-            lt++;
         }
-        answer.add(works);
-        return answer;
+        return answer.stream().mapToInt(Integer::intValue).toArray();
     }
 }

@@ -11,12 +11,12 @@ class Solution {
         var isFound = true
 
         target.forEach { t ->
-            val hasKeyMap = set.filter { it.contains(t) }.minOfOrNull { it.indexOf(t) }
-            if (hasKeyMap == null) {
+            set.filter { it.contains(t) }.minOfOrNull { it.indexOf(t) }?.let {
+                min += it + 1
+            }?: run { 
                 isFound = false
                 return@forEach
             }
-            else min += hasKeyMap + 1
         }
 
         if (isFound)answer.add(min) else answer.add(-1)

@@ -1,10 +1,10 @@
 # [level 1] 최소직사각형 - 86491 
 
-[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/86491) 
+[문제 링크](https://school.programmers.co.kr/learn/courses/30/lessons/86491?language=java) 
 
 ### 성능 요약
 
-메모리: 63.5 MB, 시간: 33.00 ms
+메모리: 97.5 MB, 시간: 20.76 ms
 
 ### 구분
 
@@ -16,7 +16,7 @@
 
 ### 제출 일자
 
-2024년 08월 06일 20:24:15
+2024년 10월 01일 13:28:09
 
 ### 문제 설명
 

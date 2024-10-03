@@ -1,7 +1,6 @@
 import java.util.StringTokenizer
 
 private lateinit var map: MutableList<MutableList<Boolean>>
-private lateinit var visited: MutableList<MutableList<Boolean>>
 private var dirY: IntArray = intArrayOf(1, -1, 0, 0)
 private var dirX: IntArray = intArrayOf(0, 0, 1, -1)
 private var answer: Boolean = false
@@ -12,11 +11,11 @@ fun dfs(y: Int, x: Int) {
         return
     }
 
-    visited[y][x] = true
+    map[y][x] = false
     for (i in 0..3) {
         val newY = y + dirY[i]
         val newX = x + dirX[i]
-        if (newY in map.indices && newX in map[newY].indices && map[newY][newX] && !visited[newY][newX]) {
+        if (newY in map.indices && newX in map[newY].indices && map[newY][newX]) {
             dfs(newY, newX)
         }
     }
@@ -32,7 +31,6 @@ fun main() {
 
     // 동적 배열 생성
     map = MutableList(N + 1) { MutableList(M + 1) { false } }
-    visited = MutableList(N + 1) { MutableList(M + 1) { false } }
 
     for (i in 1..N) {
         val str = br.readLine()
@@ -43,7 +41,6 @@ fun main() {
 
     for (j in 1..M) {
         if (map[1][j]) dfs(1, j)
-
     }
 
     if (answer) bw.write("YES")

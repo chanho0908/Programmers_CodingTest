@@ -19,7 +19,7 @@ private fun BackTracking(num: MutableList<Int>){
     }
 
     for (i in 1..N){
-        if (visited[i].not()) {
+        if (!visited[i]) {
             visited[i] = true
             num.add(i)
             BackTracking(num)

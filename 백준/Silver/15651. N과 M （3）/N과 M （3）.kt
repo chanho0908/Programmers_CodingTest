@@ -1,5 +1,5 @@
-private val answer = mutableListOf<List<Int>>()
-private lateinit var visited: BooleanArray
+private val answer = StringBuilder()
+private lateinit var arr: IntArray
 private var N = 0
 private var M = 0
 
@@ -7,23 +7,24 @@ fun main(){
     val (n, m) = readln().split(" ").map { it.toInt() }
     N = n
     M = m
-    visited = BooleanArray(N + 1)
 
-    DFS(emptyList())
-    println(answer.joinToString("\n") { it.joinToString(" ") })
+    arr = IntArray(M)
+
+    DFS(0)
+    println(answer)
 }
 
-private fun DFS(number: List<Int>) {
-    if (number.size == M) {
-        answer.add(number)
+private fun DFS(depth: Int) {
+    if (depth == M) {
+        arr.forEach {
+            answer.append(it).append(' ')
+        }
+        answer.append("\n")
         return
     }
 
     for (i in 1..N){
-        if (visited[i].not()){
-            DFS(number + i)
-            visited[i] = true
-        }
-        visited[i] = false
+        arr[depth] = i
+        DFS(depth + 1)
     }
 }

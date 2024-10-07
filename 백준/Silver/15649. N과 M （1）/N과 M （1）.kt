@@ -1,4 +1,5 @@
 private lateinit var visited: BooleanArray
+private lateinit var arr: IntArray
 private val answer = StringBuilder()
 private var N = 0
 private var M = 0
@@ -7,23 +8,26 @@ fun main(){
     val (n, m) = readln().split(" ").map { it.toInt() }
     N = n
     M = m
+    arr = IntArray(M)
     visited = BooleanArray(N + 1)
-    BackTracking(mutableListOf())
+    BackTracking(0)
     print(answer)
 }
 
-private fun BackTracking(num: MutableList<Int>){
-    if (num.size == M) {
-        answer.append(num.joinToString(" ")).append("\n")
+private fun BackTracking(depth: Int){
+    if (depth == M) {
+        arr.forEach {
+            answer.append(it).append(' ')
+        }
+        answer.append('\n')
         return
     }
 
     for (i in 1..N){
         if (!visited[i]) {
             visited[i] = true
-            num.add(i)
-            BackTracking(num)
-            num.removeAt(num.size - 1)
+            arr[depth] = i
+            BackTracking(depth + 1)
             visited[i] = false
         }
     }

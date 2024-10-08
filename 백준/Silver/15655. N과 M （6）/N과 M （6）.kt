@@ -27,11 +27,11 @@ private fun BackTracking(start: Int, depth: Int){
     }
 
     for (i in start until  N){
-        if (visited[i].not()) {
-            visited[i] = true
+        //if (visited[i].not()) {
+            //visited[i] = true
             numbersArray[depth] = arr[i]
-            BackTracking(i, depth + 1)
-            visited[i] = false
-        }
+            BackTracking(i +1, depth + 1)
+            //visited[i] = false
+        //}
     }
 }

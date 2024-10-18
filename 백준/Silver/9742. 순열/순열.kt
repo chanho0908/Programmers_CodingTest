@@ -1,3 +1,5 @@
+package com.example.algorithm.backjoon.kotlin.backTracking
+
 private lateinit var words: List<String>
 private lateinit var visited: BooleanArray
 private var totalCount = 0
@@ -9,7 +11,6 @@ fun main() {
     var line: String?
 
     while (br.readLine().also { line = it } != null) {
-        if (line.isNullOrEmpty()) break
         val parts = line!!.split(" ")
         words = parts[0].map { it.toString() }
 
